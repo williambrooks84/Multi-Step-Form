@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Regular font */
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Medium font */
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Bold font */
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Apply Ubuntu font globally */
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--color-bg);
+}
+
+:root{
+    --color-primary: #162456;
+    --color-primary-light: #5500ff;
+    --color-secondary: #6a7282;
+    --color-bg: #f0f0f0;
+    --color-white: #ffffff;
+    --color-warning: #fb2c36;
+}
+
+@theme static{
+    --color-primary: var(--color-primary);
+    --color-primary-light: var(--color-primary-light);
+    --color-secondary: var(--color-secondary);
+    --color-bg: var(--color-bg);
+    --color-white: var(--color-white);
+    --color-warning: var(--color-warning);
+}
+
+/*Title*/
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.875rem; /* Adjust font size for mobile */
+  }
+}
+
+/* Text */
+.description{
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-secondary); 
+}
+
+@media (max-width: 640px) {
+  .description {
+    font-size: 0.75rem;
+  }
+}
+
+/* Button styles */
+
+.btn-default {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-transform: capitalize;
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn-bgless {
+    background-color: transparent;
+    color: var(--color-secondary);
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+}
+
+.btn-bgless:hover {
+
+    color: var(--color-secondary);
+}
