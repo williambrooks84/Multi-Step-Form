@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col items-center justify-center p-10 gap-6">
-    <div class="flex flex-col gap-10">
+  <div class="flex flex-col items-center justify-center p-5 md:p-10 gap-2 md:gap-6">
+    <div class="flex flex-col gap-3 md:gap-10">
       <div class="text-left">
         <h1>Finishing up</h1>
         <p class="description">Double-check everything looks OK before confirming.</p>
@@ -11,15 +11,15 @@
         <div class="flex flex-row justify-between items-center mb-4">
           <div class="flex flex-col mb-4">
             <div class="flex flex-col items-start">
-              <p class="text-2xl font-semibold text-primary">
+              <p class="text-lg md:text-2xl font-semibold text-primary">
                 {{ fromStore.formData.selectedPlan?.name }}
                 <span>{{ fromStore.formData.isYearly ? 'Yearly' : 'Monthly' }}</span>
               </p>
-              <Button type="button" :name="'Change'" class="btn btn-bgless underline text-lg font-normal"
+              <Button type="button" :name="'Change'" class="btn btn-bgless underline text-md md:text-lg font-normal"
                 @click="goBackToStep2" />
             </div>
           </div>
-          <p class="text-2xl font-bold text-primary">
+          <p class="text-lg md:text-2xl font-bold text-primary">
             ${{ fromStore.formData.isYearly ? fromStore.formData.selectedPlan?.yearlyPrice :
               fromStore.formData.selectedPlan?.price }}
             {{ fromStore.formData.isYearly ? '/yr' : '/mo' }}
@@ -34,7 +34,7 @@
         <div v-else>
           <ul>
             <li v-for="addon in fromStore.formData.selectedOptions" :key="addon.name"
-              class="flex justify-between items-center text-lg mb-2">
+              class="flex justify-between items-center text-md md:text-lg mb-2">
               <span class="text-secondary">{{ addon.name }}</span>
               <span class="font-medium text-primary">
                 +${{ fromStore.formData.isYearly ? addon.yearlyPrice : addon.price }}
@@ -47,15 +47,15 @@
 
       <!-- Total Price -->
       <div class="w-full max-w-lg p-6 flex justify-between items-center">
-        <p class="text-lg font-bold text-secondary">
+        <p class="text-md md:text-lg font-bold text-secondary">
           Total (per {{ fromStore.formData.isYearly ? 'year' : 'month' }}):
         </p>
-        <p class="text-lg font-bold text-primary-light">
+        <p class="text-md md:text-lg font-bold text-primary-light">
           +${{ fromStore.totalPrice }}{{ fromStore.formData.isYearly ? '/yr' : '/mo' }}
         </p>
       </div>
 
-      <div class="flex flex-row justify-between mt-10">
+      <div class="flex flex-row justify-between  mt-2 md:mt-10">
         <div class="w-fit">
           <Button v-if="stepStore.currentStep > 1" :name="'Go back'" class="btn btn-bgless" @click="goBack" />
         </div>

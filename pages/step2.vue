@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col justify-center items-center text-left p-10 gap-10">
-    <div class="flex flex-col gap-10">
-      <div class="flex flex-col gap-10">
+  <div class="flex flex-col justify-center items-center text-left p-5 md:p-10 gap-2 md:gap-10">
+    <div class="flex flex-col gap-2 md:gap-10">
+      <div class="flex flex-col gap-2 md:gap-10">
         <div class="flex flex-col gap-2">
           <h1>Select your plan</h1>
           <p class="description">You have the option of monthly or yearly billing.</p>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-center gap-6">
+        <div class="flex flex-col md:flex-row justify-center gap-3 md:gap-6">
           <Card v-for="plan in plans" :key="plan.name" :icon="plan.icon" :name="plan.name"
             :price="isYearly ? plan.yearlyPrice : plan.price" :isYearly="isYearly" :modelValue="selectedPlan?.name"
             @update:modelValue="onSelectPlan" />
@@ -15,7 +15,15 @@
 
         <div class="flex flex-row justify-center items-center w-full p-3 gap-3 bg-bg rounded-2xl">
           <span :class="{ 'font-bold': !isYearly }">Monthly</span>
-          <USwitch v-model="isYearly" class="switch-custom"/>
+            <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" v-model="isYearly" class="sr-only peer" />
+            <div
+              class="w-12 h-6 bg-primary rounded-full peer peer-checked:bg-primary transition-colors duration-300"
+            ></div>
+            <div
+              class="absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300 peer-checked:translate-x-6"
+            ></div>
+            </label>
           <span :class="{ 'font-bold': isYearly }">Yearly</span>
         </div>
 

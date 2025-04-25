@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col justify-center items-center text-left p-10 gap-10">
-    <div class="flex flex-col gap-10">
+  <div class="flex flex-col justify-center items-center text-left p-5 md:p-10 gap-2 md:gap-10">
+    <div class="flex flex-col gap-2 md:gap-10">
       <div class="flex flex-col gap-2">
         <h1>Personal info</h1>
         <p class="description">Please provide your name, email address, and phone number.</p>
@@ -19,7 +19,7 @@
     </div>
 
     <!-- ButtonGroup positioned exactly like other steps -->
-    <div class="flex flex-row justify-between mt-10 w-full">
+    <div class="flex flex-row justify-between mt-2 md:mt-10 w-full">
       <!-- Left side empty to align with other steps -->
       <div class="w-fit"></div>
 

@@ -1,10 +1,14 @@
 <template>
     <div class="form-field flex flex-col">
-        <UFormField :label="label" class="text-blue-950 text-lg font-bold">
-            <UInput :name="name" :id="id" :placeholder="placeholder" class="w-full" input-class="w-full p-4"
-                :model-value="modelValue" @update:model-value="val => emit('update:modelValue', val)" />
-
-        </UFormField>
+        <label :for="id" class="text-primary text-md md:text-lg font-bold mb-2">{{ label }}</label>
+        <input 
+            :name="name" 
+            :id="id" 
+            :placeholder="placeholder" 
+            :value="modelValue" 
+            @input="event => emit('update:modelValue', event.target.value)" 
+            class="w-full p-2 md:p-4 border border-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-light"
+        />
     </div>
 </template>
 

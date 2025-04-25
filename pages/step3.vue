@@ -1,22 +1,17 @@
 <template>
-  <div class="flex flex-col md:flex-row justify-center items-center text-left p-10 gap-10">
-    <div class="flex flex-col gap-10">
-      <div class="flex flex-col gap-10">
+  <div class="flex flex-col md:flex-row justify-center items-center text-left p-5 md:p-10 gap-2 md:gap-10">
+    <div class="flex flex-col gap-2 md:gap-10">
+      <div class="flex flex-col gap-2 md:gap-10">
         <div class="flex flex-col gap-2">
           <h1>Pick add-ons</h1>
           <p class="description">Add-ons help enhance your gaming experience (optional)</p>
         </div>
 
-        <div>
-          <OptionList
-            v-for="option in options"
-            :key="option.name"
-            :name="option.name"
-            :description="option.description"
+        <div class="flex flex-col gap-4">
+          <OptionList v-for="option in options" :key="option.name" :name="option.name" :description="option.description"
             :price="isYearly ? option.yearlyPrice : option.price"
             :isSelected="fromStore.formData.selectedOptions.some(o => o.name === option.name)"
-            @toggle="() => fromStore.toggleOption(option)"
-          />
+            @toggle="() => fromStore.toggleOption(option)" />
         </div>
 
         <ButtonGroup :isDisabled="false" />

@@ -6,15 +6,33 @@
           'border-gray-200': !isChecked
       }"
     >
-      <div class="flex flex-row gap-8 items-center">
+      <div class="flex flex-row gap-4 md:gap-8 items-center">
         <!-- Checkbox -->
-        <UCheckbox v-model="isChecked" color="customPurple" v-slot="{ checked }">
-          <img v-if="checked" src="/assets/images/icon-checkmark.svg" alt="Checked" class="w-4 h-4" />
-        </UCheckbox>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input 
+            type="checkbox" 
+            v-model="isChecked" 
+            class="peer sr-only" 
+          />
+            <div 
+            class="w-6 h-6 rounded-md flex justify-center items-center transition-colors duration-300"
+            :class="{
+              'bg-primary-light': isChecked,
+              'bg-gray-200': !isChecked
+            }"
+          >
+            <img 
+              v-if="isChecked" 
+              src="/assets/images/icon-checkmark.svg" 
+              alt="Checked" 
+              class="w-4 h-4" 
+            />
+          </div>
+        </label>
         
         <div class="flex flex-col gap-1">
-          <h3 class="text-lg font-bold text-primary">{{ name }}</h3>
-          <p class="text-sm font-medium text-secondary">{{ description }}</p>
+          <h3 class="text-md md:text-lg font-bold text-primary">{{ name }}</h3>
+          <p class="text-xs md:text-sm font-medium text-secondary">{{ description }}</p>
         </div>
       </div>
       
