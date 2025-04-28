@@ -40,14 +40,7 @@ body {
     --color-warning: #fb2c36;
 }
 
-@theme static{
-    --color-primary: var(--color-primary);
-    --color-primary-light: var(--color-primary-light);
-    --color-secondary: var(--color-secondary);
-    --color-bg: var(--color-bg);
-    --color-white: var(--color-white);
-    --color-warning: var(--color-warning);
-}
+/* Removed @theme rule as it is not a standard CSS rule */
 
 /*Title*/
 
