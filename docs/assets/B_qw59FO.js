@@ -1,0 +1,1 @@
+import{z as u,r as p}from"./BPIw7xVh.js";const S=u("step",()=>{const e=p(1);function t(r){e.value=r}function o(){e.value++}function n(){e.value--}return{currentStep:e,goToStep:t,nextStep:o,previousStep:n}});export{S as u};
