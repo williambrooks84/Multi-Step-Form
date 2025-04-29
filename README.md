@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Built with
 
-- Tailwindcss
+- [Tailwindcss](https://tailwindcss.com) - CSS framework
 - [Nuxt](https://nuxt.com) - JS library
 
 
