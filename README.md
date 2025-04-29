@@ -48,7 +48,7 @@ This project helped me learn how to use Nuxt and how to compile it to a static p
 
 ## Author
 
-- Website - [William Brooks](https://www.your-site.com](https://github.com/williambrooks84)
+- Website - [William Brooks](https://github.com/williambrooks84)
 - Frontend Mentor - [@williambrooks84](https://www.frontendmentor.io/profile/williambrooks84)
 
 
