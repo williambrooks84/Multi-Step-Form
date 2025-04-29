@@ -1,75 +1,57 @@
-# Nuxt Minimal Starter
+# Frontend Mentor - Multi-step form solution
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Setup
+## Table of contents
 
-Make sure to install dependencies:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-```bash
-# npm
-npm install
+## Overview
 
-# pnpm
-pnpm install
+### The challenge
 
-# yarn
-yarn install
+Users should be able to:
 
-# bun
-bun install
-```
+- Complete each step of the sequence
+- Go back to a previous step to update their selections
+- See a summary of their selections on the final step and confirm their order
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+- Receive form validation messages if:
+  - A field has been missed
+  - The email address is not formatted correctly
+  - A step is submitted, but no selection has been made
 
-## Development Server
+### Links
 
-Start the development server on `http://localhost:3000`:
+- Solution URL: [Repository](https://github.com/williambrooks84/Multi-Step-Form)
+- Live Site URL: [Site](https://williambrooks84.github.io/Multi-Step-Form/)
 
-```bash
-# npm
-npm run dev
+## My process
 
-# pnpm
-pnpm dev
+### Built with
 
-# yarn
-yarn dev
+- Tailwindcss
+- [Nuxt](https://nuxt.com) - JS library
 
-# bun
-bun run dev
-```
 
-## Production
+### What I learned
 
-Build the application for production:
+This project helped me learn how to use Nuxt and how to compile it to a static page during my internship. Before my internship I only had experience with the React framework so this helped me learn something new. I already learned how to use Tailwindcss way before but this helped me imprive my skills in Tailwind, like the use of themes and components in the style.css file.
 
-```bash
-# npm
-npm run build
+## Author
 
-# pnpm
-pnpm build
+- Website - [William Brooks](https://www.your-site.com](https://github.com/williambrooks84)
+- Frontend Mentor - [@williambrooks84](https://www.frontendmentor.io/profile/williambrooks84)
 
-# yarn
-yarn build
 
-# bun
-bun run build
-```
+## Acknowledgments
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+I would like to thank my internship leader for helping me upload this project to Github. If it wasn't for him it wouldn't have been as easily possible. 
